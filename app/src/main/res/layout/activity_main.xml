@@ -15,13 +15,13 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:textSize="35dp">
-    </TextView>
+        android:textSize="35sp"/>
 
     <EditText
         android:id="@+id/profile_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:autofillHints="emailAddress"
         android:layout_below="@+id/profile_title"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="25dp"
@@ -29,164 +29,123 @@
         android:background="@drawable/inputs_background"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
-        android:padding="10dp">
-    </EditText>
+        android:padding="10dp"/>
+    <EditText
+        android:id="@+id/profile_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints="emailAddress"
+        android:layout_below="@+id/profile_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/inputs_background"
+        android:hint="Password"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"/>
 
     <EditText
         android:id="@+id/profile_schoolName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_email"
+        android:inputType="text"
+        android:layout_height="48dp"
+        android:layout_below="@+id/profile_password"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/inputs_background"
         android:hint="School Name"
-        android:padding="10dp">
-    </EditText>
+        android:padding="10dp"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/profile_city"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:autofillHints="no"
         android:layout_below="@+id/profile_schoolName"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/inputs_background"
         android:hint="City"
-        android:padding="10dp">
-    </EditText>
+        android:padding="10dp"/>
 
 
     <EditText
         android:id="@+id/profile_address"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@+id/profile_city"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginRight="20dp"
+        android:autofillHints="no"
+        android:inputType="textPostalAddress"
         android:background="@drawable/inputs_background"
         android:hint="address"
-        android:padding="10dp">
-    </EditText>
+        android:padding="10dp"/>
+
     <EditText
         android:id="@+id/profile_phoneNumber"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@+id/profile_address"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/inputs_background"
         android:hint="Enter multiple phone numbers"
-        android:padding="10dp">
-    </EditText>
+        android:autofillHints="no"
+        android:inputType="phone"
+        android:padding="10dp"/>
+
     <EditText
         android:id="@+id/profile_telephoneNumber"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@+id/profile_phoneNumber"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/inputs_background"
         android:hint="Enter multiple Telephone numbers"
-        android:padding="10dp">
-    </EditText>
+        android:autofillHints="no"
+        android:inputType="phone"
+        android:padding="10dp"/>
 
     <EditText
         android:id="@+id/profile_schoolCode"
         android:layout_width="143dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@+id/profile_telephoneNumber"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginRight="20dp"
+        android:autofillHints="no"
+        android:inputType="text"
         android:background="@drawable/inputs_background"
         android:hint="School Code"
-        android:padding="10dp">
-    </EditText>
-
-    <EditText
-        android:id="@+id/profile_principalCode"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_telephoneNumber"
-        android:layout_marginStart="240dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/inputs_background"
-        android:hint="Principal Code"
-        android:padding="10dp">
-    </EditText>
-
-    <EditText
-        android:id="@+id/profile_studentCode"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_schoolCode"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/inputs_background"
-        android:hint="Student Code"
-        android:padding="10dp">
-    </EditText>
-
-    <EditText
-        android:id="@+id/profile_employeeCode"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_principalCode"
-        android:layout_marginStart="240dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/inputs_background"
-        android:hint="Employe Code"
-        android:padding="10dp">
-    </EditText>
-
-    <EditText
-        android:id="@+id/profile_teacherCode"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_studentCode"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/inputs_background"
-        android:hint="teacher Code"
-        android:padding="10dp">
-    </EditText>
-
-    <EditText
-        android:id="@+id/profile_driverCode"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_employeeCode"
-        android:layout_marginStart="240dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/inputs_background"
-        android:hint="Driver Code"
-        android:padding="10dp">
-    </EditText>
+        android:padding="10dp"/>
 
     <Button
         android:id="@+id/profile_saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_teacherCode"
+        android:layout_below="@+id/profile_schoolCode"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:height="@android:dimen/app_icon_size"
         android:shadowColor="@color/black"
-        android:text="save information">
-    </Button>
+        android:text="save information"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
