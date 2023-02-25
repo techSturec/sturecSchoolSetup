@@ -187,14 +187,15 @@ class MainActivity : AppCompatActivity() {
 
 
             reference.get().addOnCompleteListener{
-                if(it.isSuccessful)
-                {
-                    if(it.result.exists())
+                val check = it.result.value==null
+                Log.e("checking", check.toString())
+                    if(!check)
                     {
                         Toast.makeText(this, "This School Code is already taken", Toast.LENGTH_LONG).show()
                         progressBar.visibility = View.GONE
                     }else
                     {
+                        Log.e("is", "here")
                         val auth = FirebaseAuth.getInstance()
                         auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString()).addOnSuccessListener {result->
                             result.user?.let { it1 ->
@@ -234,15 +235,6 @@ class MainActivity : AppCompatActivity() {
                                 }
                         }
                     }
-                }else
-                {
-                    Toast.makeText(
-                        this,
-                        "Some Error Occurred",
-                        Toast.LENGTH_LONG
-                    ).show()
-                    progressBar.visibility = View.GONE
-                }
             }
 
         }
